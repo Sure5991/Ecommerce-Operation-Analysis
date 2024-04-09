@@ -1,0 +1,74 @@
+
+============================= Primary Data Extraction using Excel VBA ======================================
+
+# Data needed to be extracted from reports which were created by other departments. These were not in tabular form and each sheet was created for each date. Doing 
+  copy paste is tedious work, so below excel module was created. With this if data had been in same cell throughout all sheet, we could extract all data in one go
+
+
+Sub Macro1()
+'
+' Macro1 Macro
+'
+' Keyboard Shortcut: Ctrl+Shift+E
+'
+ Dim ws As Worksheet
+    Dim outputSheet As Worksheet
+    Dim sheetName As String
+    Dim rowNum As Integer
+    Dim colNum As Integer
+    Dim col As Variant
+
+---->Data extracted from these cells
+
+    cols = Array("B2", "C3", "C11", "C7", "C8", "M6", "M5", "C18", "C19", "C20", "F22", "F23", "F24", "F25", "F26", "F27", "F28", "F29", "F30", "F31", "F32", "F33", "F34", "F37", "F38", "F39", "F40", "F43", "F44", "F45")
+    
+----->New Sheet is created to store data in tabular form
+
+    'Create a new sheet to store the extracted data
+    Set outputSheet = ThisWorkbook.Sheets.Add
+    outputSheet.Name = "Master"
+    
+    rowNum = 1
+    For Each ws In ThisWorkbook.Sheets
+    colNum = 1
+    If ws.Name <> outputSheet.Name Then
+    sheetName = ws.Name
+    For Each col In cols
+        outputSheet.Cells(rowNum, 1).Value = sheetName
+        outputSheet.Cells(rowNum, colNum + 1).Value = ws.Range(col).Value
+        colNum = colNum + 1
+        Next col
+    rowNum = rowNum + 1
+    End If
+    Next ws
+
+End Sub
+
+============================= Function for counting no of elements in Column ======================================
+
+    Set ws = ThisWorkbook.Sheets("Sheet2")
+    
+    ' Specify the column to check
+    Set columnToCheck = ws.Columns(col) 
+    
+    ' Find the last row with data in the specified column
+    lastRow = ws.Cells(ws.Rows.Count, columnToCheck.Column).End(xlUp).Row
+    
+    ' Get the number of elements (rows) in the column
+    GetNumberOfElementsInColumn = lastRow
+End Function
+
+============================= Function for counting no of elements in Rows ======================================
+
+   
+    Set ws = ThisWorkbook.Sheets("Sheet2") ' Change "Sheet2" to your sheet name
+    
+    ' Specify the column to check
+    Set columnToCheck = ws.Columns(rows) ' Change "rows" to your row letter
+    
+    ' Find the last row with data in the specified column
+    lastRow = ws.Cells(ws.Rows.Count, columnToCheck.column).End(xlUp).row
+    
+    ' Get the number of elements (rows) in the column
+    GetNumberOfElementsInColumn = lastRow
+End Function
