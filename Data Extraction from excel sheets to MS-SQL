@@ -1,6 +1,6 @@
-> Data Extraction from excel sheets to SQL Server
-
-**--CREATING MASTER DATA TABLE --**
+### Data Extraction from excel sheets to SQL Server
+```ruby
+--CREATING MASTER DATA TABLE --
 
 drop table  if exists master_data;
 create table master_data
@@ -108,3 +108,4 @@ end;
 exec insert_data_two @table = 'impact_data';
 
 select* from impact_ship_data;
+```
