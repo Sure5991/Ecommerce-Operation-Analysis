@@ -1,4 +1,6 @@
-Data Extraction from excel sheets to SQL Server
+===================================Data Extraction from excel sheets to SQL Server===========================================
+
+Monthly wise updated files are imported in SQL Server, then created tables for these format. The stored procedure is created for executing the insertion of the data
 
 --CREATING MASTER DATA TABLE --
 
