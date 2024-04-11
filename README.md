@@ -14,5 +14,15 @@ Process Load Analysis, Inbound and Outbound Load analysis and Overall Process MI
   Now from sheets in excel, data is extracted and inserted to master file for reporting and data analysis
   Monthly wise updated files are imported in SQL Server, then created tables for these format.
   The stored procedure is created for executing the insertion of the data
+
+## 2. Creating PowerBI Report
+
+  1. Imported data from Database
+  2. Key Metrics were created using DAX Functions
+  3. In data Visualization tab, 3 pages were created :
+     -> Weekly/Monthly/Yearly Report - reduce time for report by 50 %
+     -> Process Analysis - For checking variance in load, Adequate Manpower , IRT issues etc
+     -> IB-OB Analysis - Impacted shipment due to delay in truckload, CPD Breaches, Special run deployed and cut off extension etc.
+
  
  
