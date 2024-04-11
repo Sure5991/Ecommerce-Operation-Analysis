@@ -11,6 +11,8 @@ Process Load Analysis, Inbound and Outbound Load analysis and Overall Process MI
 
 # 2. Data Extraction from excel sheets to MS-SQL
 
-Now from sheets in excel, data is extracted and inserted to master file for reporting and data analysis
+  Now from sheets in excel, data is extracted and inserted to master file for reporting and data analysis
+  Monthly wise updated files are imported in SQL Server, then created tables for these format.
+  The stored procedure is created for executing the insertion of the data
  
  
