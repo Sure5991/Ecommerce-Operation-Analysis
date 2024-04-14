@@ -15,7 +15,7 @@ Process Load Analysis, Inbound and Outbound Load analysis and Overall Process MI
   Monthly wise updated files are imported in SQL Server, then created tables for these format.
   The stored procedure is created for executing the insertion of the data
 
-## 2. Creating PowerBI Report
+## 3. Creating PowerBI Report
 
   1. Imported data from Database
   2. Key Metrics were created using DAX Functions
@@ -23,6 +23,14 @@ Process Load Analysis, Inbound and Outbound Load analysis and Overall Process MI
      1. Weekly/Monthly/Yearly Report - reduce time for report by 50 %
      2. Process Analysis - For checking variance in load, Adequate Manpower , IRT issues etc
      3. IB-OB Analysis - Impacted shipment due to delay in truckload, CPD Breaches, Special run deployed and cut off extension etc.
+
+## 4. SQL Analysis ( Few Samples )
+
+1. Process details in catergory wise in monthly basis
+2. Higest IPP with manpower and process details
+3. Details of IPP and Manpower required to process highest overall or resort or market or returns
+4. MIS REPORT in view which can be view in monthy basis ( group by ) or daily basis
+5. Can check for how many day shipment per bag (SPB) crossed above or below limit. Same can be done for incoming also
 
  
  
