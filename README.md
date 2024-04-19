@@ -1,5 +1,5 @@
 # Ecommerce-Operation-Analysis
-Process Load Analysis, Inbound and Outbound Load Analysis and Overall Process MIS Report. Data was extracted from Excel files and compiled into SQL. SQL queries are used to take accurate readings. Data visualisation is done in Power BI for visual analysis and meetings
+Process Load Analysis, Inbound and Outbound Load Analysis and Overall Process MIS Report. Data was extracted from Excel files and compiled into SQL. SQL queries are used to take accurate readings and exploratory Data analysis. Data visualisation is done in Power BI for visual analysis and meeting reports
 
  ## 1. Primary Data Extraction using Excel VBA
     
